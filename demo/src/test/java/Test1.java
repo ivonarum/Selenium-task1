@@ -2,20 +2,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import org.junit.Test;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 public class Test1 {
     WebDriver driver;
 
-    @Before 
+    @BeforeEach
     //OTWIERANIE PRZEGLADARKI I CHROME DRIVER
     public void driverSetup(){
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
     }
 
-    @After
+    @AfterEach
     public void driverClose(){
         driver.quit();
     } 
